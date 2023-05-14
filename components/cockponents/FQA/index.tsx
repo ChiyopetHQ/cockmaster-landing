@@ -12,64 +12,72 @@ type QAType = {
 }
 
 const FQA = () => {
+  const FQAs: QAType[] = [
+    {
+      question: "What is Cockmaster?",
+      answer:
+        "Cockmaster is the first lottery platform that support Multichain Wallet Connection that allows people to play using their desired Wallet in any Blockchain supported.",
+    },
+    {
+      question: "Why do I need Cockmaster?",
+      answer:
+        "We provide a platform for people that crave challenge and reach victory across chains.",
+    },
+    {
+      question: "Why should I mint Cockmaster?",
+      answer:
+        "Our NFT holders will get evenly distributed revenue sharing that is generated from the lottery fees.",
+    },
+    {
+      question: "Where to find Cockmaster?",
+      answer:
+        "We will launch the Cockmaster NFT Collection on Souffl3 Launchpad consists of 3333 Cocks ready to be owned.",
+    },
+  ];
 
-    const FQAs: QAType[] = [
-        {
-            question: "What is Cockmaster?",
-            answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever"
-        },
-        {
-            question: "Why do i need Cockmaster?",
-            answer: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters."
-        },
-        {
-            question: 'How many cock?',
-            answer: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.'
-        },
-        {
-            question: 'Where to find cock?',
-            answer: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
-        },
-        {
-            question: 'Where is my cock?',
-            answer: 'from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.'
-        }
-    ];
-
-    return <section className="py-10   " id="faq">
-        <Container>
-            <div className=" max-w-4xl m-auto">
-                <div className="flex justify-center">
-
-                    <Head title="FAQ" />
-                </div>
-                <div className="h-12"></div>
-                <div className=" ">
-                    {
-                        FQAs.map((fqa, index) => <div key={index}><QA qa={fqa} /><div className="h-2" ></div></div>)
-                    }
-                </div>
-            </div>
-        </Container>
-    </section >
-}
+  return (
+    <section className="py-10" id="faq">
+      <Container>
+        <div className=" max-w-4xl m-auto">
+          <div className="flex justify-center">
+            <Head title="FAQ" />
+          </div>
+          <div className="h-12"></div>
+          <div className=" ">
+            {FQAs.map((fqa, index) => (
+              <div key={index}>
+                <QA qa={fqa} />
+                <div className="h-2"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+};
 
 const QA = ({ qa }: { qa: QAType }) => {
-    const [closed, setClosed] = useState(true);
-    return <div className=" border-2 border-black rounded-2xl overflow-hidden">
-        <div className="flex items-center justify-between px-3 py-2">
-            <h2 className="font-bold text-[17px] lg:text-xl" >{qa.question}</h2>
-            <div
-                onClick={() => setClosed(!closed)}
-                className="w-14 h-14 rounded-full flex items-center justify-center trnasition hover:bg-white/20 cursor-pointer ">
-                {closed ? <FaChevronDown size={22} /> : <FaChevronUp size={22} />}
-            </div>
+  const [closed, setClosed] = useState(true);
+  return (
+    <div className="transition-all border-2 border-black rounded-2xl overflow-hidden">
+      <div
+        className="flex items-center justify-between cursor-pointer px-3 py-2"
+        onClick={() => setClosed(!closed)}
+      >
+        <h2 className="font-bold text-[17px] lg:text-xl">{qa.question}</h2>
+        <div className="w-14 h-14 rounded-full flex items-center justify-center transition hover:bg-white/20">
+          {closed ? <FaChevronDown size={22} /> : <FaChevronUp size={22} />}
         </div>
-        <div className={`bg-white/5 transition-all ${closed ? "h-0" : "h-auto"} `}>
-            <div className="p-2">
-                <Para txt={qa.answer} />
-            </div>
+      </div>
+      <div
+        className={`bg-white/5 transition-all ${closed ? "h-0" : "h-full"} `}
+      >
+        <div className="p-2">
+          <Para txt={qa.answer} className="p-2" />
         </div>
+      </div>
     </div>
-}
+  );
+};
 export default FQA;

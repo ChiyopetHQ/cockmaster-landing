@@ -7,17 +7,16 @@ type SocialMediaType = {
 }
 const SocialMedia = () => {
     const socialMedia: SocialMediaType[] = [
-        {
-            icon: <FaDiscord size={28} />,
-            href: "https://www.discord.com",
-            title: "Discord",
-        },
-        {
-            icon: <FaTwitter size={28} />,
-            href: "https://www.twitter.com",
-            title: "Twitter",
-        },
-
+      {
+        icon: <FaDiscord size={28} />,
+        href: "https://discord.com/invite/hxT4cbNh",
+        title: "Discord",
+      },
+      {
+        icon: <FaTwitter size={28} />,
+        href: "https://twitter.com/Cockmaster_NFT",
+        title: "Twitter",
+      },
     ];
     return <div className="flex">
 

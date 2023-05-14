@@ -8,6 +8,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
   scroll-behavior: smooth;
+  background: #7fad71
 }
 
 a {
@@ -119,22 +120,22 @@ I Used This Tool To Generate These Gradients. Check it out: https://angrytools.c
 .gradient_header_tem1 {
 
   /* ff 3.6+ */
-  background:-moz-linear-gradient(178deg, rgba(102, 138, 90, 1) 0%, rgba(137, 180, 122, 1) 0%); 
+  background:-moz-linear-gradient(180deg, rgba(127,173,113,1) 0%, rgba(127,173,113,1) 50%, rgba(137,180,122,1) 100%); 
 
   /* safari 5.1+,chrome 10+ */
-  background:-webkit-linear-gradient(178deg, rgba(102, 138, 90, 1) 0%, rgba(137, 180, 122, 1) 0%);
+  background:-webkit-linear-gradient(180deg, rgba(127,173,113,1) 0%, rgba(127,173,113,1) 50%, rgba(137,180,122,1) 100%);
 
   /* opera 11.10+ */
-  background:-o-linear-gradient(178deg, rgba(102, 138, 90, 1) 0%, rgba(137, 180, 122, 1) 0%);
+  background:-o-linear-gradient(180deg, rgba(127,173,113,1) 0%, rgba(127,173,113,1) 50%, rgba(137,180,122,1) 100%);
 
   /* ie 6-9 */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#89B47A', endColorstr='#668A5A', GradientType=1 );
 
   /* ie 10+ */
-  background:-ms-linear-gradient(178deg, rgba(102, 138, 90, 1) 0%, rgba(137, 180, 122, 1) 0%);
+  background:-ms-linear-gradient(180deg, rgba(127,173,113,1) 0%, rgba(127,173,113,1) 50%, rgba(137,180,122,1) 100%);
 
   /* global 94%+ browsers support */
-  background:linear-gradient(178deg, rgba(102, 138, 90, 1) 0%, rgba(137, 180, 122, 1) 0%);
+  background:linear-gradient(180deg, rgba(127,173,113,1) 0%, rgba(127,173,113,1) 50%, rgba(137,180,122,1) 100%);
 
 }
   
