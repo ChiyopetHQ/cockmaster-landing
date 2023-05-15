@@ -31,7 +31,7 @@ const FQA = () => {
     {
       question: "Where to find Cockmaster?",
       answer:
-        "We will launch the Cockmaster NFT Collection on Souffl3 Launchpad consists of 3333 Cocks ready to be owned.",
+        "We will launch the Cockmaster NFT Collection on Souffl3 Launchpad consists of 1111 Cocks ready to be owned.",
     },
   ];
 

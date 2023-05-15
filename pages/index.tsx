@@ -9,7 +9,6 @@ import Header from "../components/cockponents/Header";
 import Navbar from "../components/cockponents/Navbar";
 import Roadmap from "../components/cockponents/Roadmap";
 
-
 const Template2: NextPage = () => {
   return (
     <div>
